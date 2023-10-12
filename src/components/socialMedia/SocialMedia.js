@@ -1,6 +1,7 @@
 import React from "react";
 import "./SocialMedia.css";
 import { socialMediaLinks } from "../../portfolio";
+import { competitiveSites } from "../../portfolio";
 import styled from "styled-components";
 
 const IconWrapper = styled.span`
@@ -13,24 +14,40 @@ const IconWrapper = styled.span`
   }
 `;
 
-export default function socialMedia(props) {
+export default function SocialMedia(props) {
   return (
     <div className="social-media-div">
-      {socialMediaLinks.map((media) => {
-        return (
+      <div className="social-icons">
+        {socialMediaLinks.map((media) => (
           <a
             href={media.link}
-            className={`icon-button`}
+            className="icon-button"
             target="_blank"
             rel="noopener noreferrer"
           >
             <IconWrapper {...media} {...props}>
               <i className={`fab ${media.fontAwesomeIcon}`}></i>
             </IconWrapper>
-            {/* <span></span> */}
           </a>
-        );
-      })}
+        ))}
+      </div>
+
+      <div className="competitive-icons">
+        {competitiveSites.competitiveSites.map((site) => (
+          <a
+            href={site.profileLink}
+            className="icon-button"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={site.style}
+          >
+            <span
+              className={`iconify`}
+              data-icon={site.iconifyClassname}
+            ></span>
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

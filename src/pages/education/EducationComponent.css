@@ -21,7 +21,7 @@
   justify-content: center;
 }
 
-.heading-text-div {
+.education-heading-text-div {
   text-align: center;
 }
 
@@ -30,19 +30,29 @@
   height: auto;
 }
 
-.heading-text {
+.education-heading-text {
   font-size: 56px;
   font-weight: 400;
   font-family: "Google Sans Medium";
   line-height: 1.1;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
-.heading-sub-text {
+.education-heading-sub-text {
   font-size: 30px;
   font-family: "Google Sans Regular";
   text-align: center;
+  margin-bottom: 10px;
+}
+
+.education-header-detail-text {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: "Google Sans Medium";
 }
 
 @media (max-width: 1380px) {
